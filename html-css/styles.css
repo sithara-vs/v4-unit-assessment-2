@@ -12,3 +12,168 @@ the font is called 'nunito' and can be found on google fonts
 ***you can use it if you'd like or you can choose your own***
 
 */
+
+*{
+    margin :0px;
+    padding : 0px
+}
+body{
+    background-color: rgb(241, 236, 237);
+    height: 100vh;
+}
+
+
+header{
+    border: 2px;
+    border-style: solid;
+    height: 30px;
+    width: 100%;
+    background-color: cornflowerblue;
+    
+}
+#top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+#nav{
+    border: solid,2px;
+    height: 30px;
+    width: 30vw;
+
+
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+li{
+    list-style: none;
+}
+
+#two-boxes{
+/*border: 2px,cornsilk;
+    border-style: solid; */
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    
+}
+#first-box
+{
+    /*border-style:solid;
+    border: 2px,black;*/
+    width: 70vw;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+}
+#second-box{
+
+   /* border-style:solid;
+    border: 2px,black;*/
+    width: 30vw;
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+#sq1{
+   /* border-style: solid;
+    border: 2px,black;*/
+    width: 70vw;
+    height: 70vh;
+}
+
+#sq2{
+   /* border-style: solid;
+    border: 2px,black;*/
+    width: 70vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.group{
+   /* border-style: solid;
+    border: 2px,black;  */
+    height:20vh;
+    width: 18vw;
+
+}
+
+/*#b1{
+    border-style: solid;
+    border: 2px,black;
+    height:40vh;
+    width: 18vw;
+
+}
+#b2{
+    border-style: solid;
+    border: 2px,black;
+    height:40vh;
+    width: 18vw;
+
+}
+#b3{
+    border-style: solid;
+    border: 2px,black;
+    height:40vh;
+    width: 18vw;
+
+}*/
+#sq3{
+    border-style: solid;
+    border: 2px,black;
+    width: 15vw;
+    height: 30vh;
+    box-shadow: 10px 10px 5px grey;
+}
+.prof{
+    border-radius: 50%;
+    
+}
+#sq4{
+    border-style: solid;
+    border: 2px,black;
+    width: 15vw;
+    height: 50vh;
+    box-shadow: 10px 10px 10px grey;
+}
+.list{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    border-style: solid;
+    border: 2px,black;
+    width:100%;
+    height:100%;
+    background-color: blue;
+
+}
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#qlog{
+    size: 10%;
+    position: relative;
+    left: 10px;
+    position: sticky;
+}
+#footend{
+    display: flex;
+    align-items: flex-end;
+    
+}
+
+

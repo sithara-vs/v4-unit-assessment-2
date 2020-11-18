@@ -10,7 +10,7 @@
 
 //CODE HERE
 
-
+let myArr = [ 4,'abc',[ 'cat', 'dog', 'bird'], 77]
 ////////////////////PROBLEM 2////////////////////
 /*
     The following array, nestedLetters, contains many levels of nested arrays.
@@ -21,7 +21,8 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
-
+let foundZ = nestedLetters[5][2][1]; 
+console.log(foundZ);
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -37,7 +38,8 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+;
+ let animals = [...forest,...ocean,...savannah,...desert];
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -45,7 +47,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+let animalsCopy=[...animals,'elephant'];
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -56,7 +58,13 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+const compareNums = (num1,num2) => {
+    if(num1>num2){
+        return num1
+    }
+    else 
+    return num2
+}
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -68,7 +76,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  let bestMovie = (movie) =>  { return movie +' is the best movie ever!' }
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -76,7 +84,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  let jsNinja = () => 'I am a JavaScript ninja!';
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -97,7 +105,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  delete gameInfo.rating
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -119,6 +127,18 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
+ 
+
+for(let key in shapes)
+  {
+      if(shapes.key % 2 == 1)
+      {
+         delete shapes.key;
+      }
+      
+  }
+
+
   
   
 ////////////////////PROBLEM 9////////////////////
@@ -161,7 +181,16 @@ const classes = [
 */
 
 //CODE HERE
-
+for(let i = 0 ;i < classes.length; i++)
+{
+    for(let key in classes[i])
+    {
+        if (key.includes (true))
+        {
+            classes[i].key = false
+        }
+    }
+} 
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -177,7 +206,17 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+for(let i=0;i<lettersToPair.length;i++)
+{
+    for(let j=1;j< lettersToPair.length;j++)
+    {
+        if(lettersToPair[i]==lettersToPair[j]&& i!=j)
+        {
+            let temp = [i,j]
+            pairsArray.push(temp)
+        }
+    }
+}
     
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
