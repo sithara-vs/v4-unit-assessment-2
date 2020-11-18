@@ -131,9 +131,9 @@ const compareNums = (num1,num2) => {
 
 for(let key in shapes)
   {
-      if(shapes.key % 2 == 1)
+      if(shapes[key] % 2 == 1)
       {
-         delete shapes.key;
+         delete shapes[key];
       }
       
   }
@@ -185,9 +185,9 @@ for(let i = 0 ;i < classes.length; i++)
 {
     for(let key in classes[i])
     {
-        if (key.includes (true))
+        if (classes[i][key] == true)
         {
-            classes[i].key = false
+            classes[i][key] = false
         }
     }
 } 
@@ -208,7 +208,7 @@ let pairsArray = []
 //CODE HERE
 for(let i=0;i<lettersToPair.length;i++)
 {
-    for(let j=1;j< lettersToPair.length;j++)
+    for(let j=i+1;j< lettersToPair.length;j++)
     {
         if(lettersToPair[i]==lettersToPair[j]&& i!=j)
         {
@@ -233,16 +233,21 @@ for(let i=0;i<lettersToPair.length;i++)
 */
 
 //CODE HERE
-
+function Dog(name,age,breed,tricks) {
+this.name = name
+this.age =age
+this.breed = breed
+this.tricks = tricks
+}
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
-    'Jack Russell' for the breed, and an array containing the strings 'sit' and 'shake'.
+    'Jack Russlel' for the breed, and an array containing the strings 'sit' and 'shake'.
     Store the result in a variable called 'fido'.
 */
 
 //CODE HERE
-  
+  const fido = new Dog('Fido',3,'Jack Russell',['sit','shake'])
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -252,7 +257,10 @@ for(let i=0;i<lettersToPair.length;i++)
 */
 
 //CODE HERE
-
+function bark()
+{
+    return this.name+" says bark!"
+}
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -260,7 +268,7 @@ for(let i=0;i<lettersToPair.length;i++)
 */
 
 //CODE HERE
-  
+  const fidoSpeak = bark.call(fido)
   
 ////////////////////PROBLEM 13////////////////////
 /*
@@ -271,7 +279,12 @@ for(let i=0;i<lettersToPair.length;i++)
 */
 
 //CODE HERE
-
+function teachTrick(trick){
+    
+this.tricks.push(trick);
+ return this.tricks   
+}
+//const teachStay = teachTrick.bind(fido,'stay')
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -279,7 +292,7 @@ for(let i=0;i<lettersToPair.length;i++)
 */
 
 //CODE HERE
-  
+let teachStay = teachTrick.bind(fido,'stay')
   
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -290,6 +303,10 @@ for(let i=0;i<lettersToPair.length;i++)
 */
 
 //CODE HERE
+function dogIntro(treat,toy)
+{
+    return this.name+" is a "+this.breed+" that loves "+treat+" and their "+toy+"!"
+}
 
 
 /*
@@ -299,7 +316,8 @@ for(let i=0;i<lettersToPair.length;i++)
 */
 
 //CODE HERE
-  
+  let fidoIntro = dogIntro.apply(fido, ['chicken', 'tennis ball']);
+
 
 ////////////////////PROBLEM 15////////////////////
 /*
