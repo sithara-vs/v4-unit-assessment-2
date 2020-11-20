@@ -327,7 +327,14 @@ function dogIntro(treat,toy)
 */
 
 //CODE HERE
-
+function Phone(brand,model,storage,color,sold)
+{
+   this.brand = brand,
+   this.model = model,
+   this.storage = storage,
+   this.color = color,
+   this.sold = sold
+}
   
 /*
     Next make three new phones using your constructor function.
@@ -341,11 +348,11 @@ function dogIntro(treat,toy)
 */
 
 //CODE HERE
-  // let phone1 = 
+   let phone1 = new Phone('nokia','one',1234,'blue',false)
   
-  // let phone2 = 
+   let phone2 = new Phone('apple','two',456,'green',false) 
   
-  // let phone3 = 
+   let phone3 = new Phone('samsung','three',789,'white',false)
   
 /*
     Last, add a prototype method to Phone.
@@ -356,5 +363,8 @@ function dogIntro(treat,toy)
 */
 
 //CODE HERE
-
+Phone.prototype.sell = function() {
+this.sold = true
+return this.brand+' '+this.model +' has been sold.'  }
+  
   
